@@ -2,7 +2,7 @@
 
 * Use `pathlib.Path` wherever possible. 
 
-* For multithreaded code, put `main` function in its own thread in main script. This makes it easier to use subcommands in the CLI. 
+* For multithreaded code, put `main` function in its own thread in main script. This can make it easier to coordinate main code with other threads as necessary. 
 ```python
 import threading
 
