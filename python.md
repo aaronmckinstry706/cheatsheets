@@ -2,17 +2,23 @@
 
 * Use `pathlib.Path` wherever possible. 
 
-* For multithreaded code, put `main` function in its own thread in main script. This can make it easier to coordinate main code with other threads as necessary. 
+* For multithreaded code, consider putting primary work function in its own thread in main script. This can make it easier to coordinate with other threads as necessary--for example, if one thread does heavy processing while the other listens for input commands, as is the case in neural net training code. 
 ```python
 import threading
 
-def main(args):
-    pass
+def work(args):
+    print(args)
 
-if __name__ == "__main__":
+# ...
+
+def main():
+    parsed_args = get_args()
     main_thread = threading.Thread(target=main, args=(parsed_args,))
     main_thread.start()
     main_thread.join()
+
+if __name__ == "__main__":
+    main()
 ```
 
 * Always put the main code in a function. 
