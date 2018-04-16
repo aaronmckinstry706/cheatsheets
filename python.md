@@ -117,8 +117,12 @@ import logging
 # ...other imports...
 
 LOGGER = logging.getLogger(__name__)
+stream_handler = logging.StreamHandler(sys.stdout)
+stream_handler.setLevel(logging.DEBUG)
+LOGGER.addHandler(stream_handler)
+LOGGER.setLevel(logging.INFO) # Or whatever application-wide logging level you want.
 
-# ...
+# ...the rest of the code...
 ```
 
 * Use the `daemon=True` argument in `threading.Thread` constructor to make a thread quit when main thread exits. 
