@@ -1,5 +1,11 @@
 # Python: code organization, code snippets, useful API info.
 
+## Resources
+
+* [log format string](https://docs.python.org/3/library/logging.html#logrecord-attributes)
+
+## Code, etc.
+
 * Use `pathlib.Path` wherever possible. 
 
 * For multithreaded code, consider putting primary work function in its own thread in main script. This can make it easier to coordinate with other threads as necessary--for example, if one thread does heavy processing while the other listens for input commands, as is the case in neural net training code. 
