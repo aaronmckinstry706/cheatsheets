@@ -56,7 +56,7 @@ if __name__ == "__main__":
 
 * For subcommands, where the logic of each command is entirely separate:
 
-```
+```python
 def cmd1(args):
     print(args)
 
