@@ -4,5 +4,5 @@ I need to...
 
 * build only specific Maven subprojects within a larger Maven project: `mvn install --projects <dir-name>`.
 
-* build specific Maven subprojects within a larger Maven project, as well as all modules required by this project: `mvn install --projects <dir-name> --also-make`.
+* build specific Maven subprojects within a larger Maven project, as well as all modules required by this project: `mvn install --projects <dir-name> --also-make`. (Short version `-pl <dir-name> -am`.)
 
