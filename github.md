@@ -19,3 +19,7 @@ I need to...
   - `git stash apply`;
   - check to see that there are no merge conflicts between stashed changes and current branch (if so, you must resolve them), `git add` and `git commit`;
   - `git stash drop` to (sort of) delete the stash. 
+
+## Resources
+
+[Undoing Things](https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things)
